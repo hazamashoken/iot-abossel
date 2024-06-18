@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: wil42-playground
 spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
   replicas: 1
   revisionHistoryLimit: 3
   selector:
@@ -13,9 +16,6 @@ spec:
       labels:
         app: wil42-playground
     spec:
-      syncPolicy:
-        automated:
-          selfHeal: true
       containers:
       - image: wil42/playground:v2
         name: wil42-playground
