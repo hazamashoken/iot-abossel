@@ -13,6 +13,8 @@ spec:
       labels:
         app: wil42-playground
     spec:
+      syncPolicy:
+        automated: {}
       containers:
       - image: wil42/playground:v2
         name: wil42-playground
