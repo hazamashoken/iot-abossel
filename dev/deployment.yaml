@@ -14,7 +14,8 @@ spec:
         app: wil42-playground
     spec:
       syncPolicy:
-        automated: {}
+        automated:
+          selfHeal: true
       containers:
       - image: wil42/playground:v2
         name: wil42-playground
